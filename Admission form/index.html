@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a237e;
+      color: #fff;
+    }
+
+    #logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    h1, h2 {
+      margin: 5px 0;
+    }
+
+    #form-container {
+      margin: 20px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #1a237e;
+      color: #fff;
+    }
+
+    .subject-row td {
+      padding: 5px;
+    }
+
+    #signatures {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .signature-block {
+      width: 30%;
+    }
+
+    .signature-block label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .signature-block input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px;
+      background-color: #1a237e;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="logo" src="image/logo.png" alt="Institute Logo">
+    <h1>GENERAL SIR JOHN KOTELAWALA DEFENCE UNIVERSITY</h1>
+    <h2>Intake 39 4th Semester Examination - Nov - Dec 2023 </h2>
+  </header>
+
+  <div id="form-container">
+    <h1 style="color: darkblue; text-align: center;">Admission Form</h1>
+
+    <label for="student-name">Student Name:</label>
+    <input type="text" id="student-name" name="student-name" required>
+
+    <label for="id-number">ID Number:</label>
+    <input type="text" id="id-number" name="id-number" required>
+
+    <label for="index-number">Index Number:</label>
+    <input type="text" id="index-number" name="index-number" required>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>  
+          <th>Time</th>
+          <th>Venue</th>
+          <th>Subject Code</th>
+          <th>Student Signature</th>
+          <th>Invigilator Signature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Repeat the following row for each subject -->
+        <tr class="subject-row">
+            <td><input type="text" name="date[]" value="28 NOV" required></td>
+            <td><input type="text" name="time[]" value="0900-1100" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2121" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+
+          <tr class="subject-row">
+            <td><input type="text" name="date[]" value="30 NOV" required></td>
+            <td><input type="text" name="time[]" value="0900-1100" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2113" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+
+          <tr class="subject-row">
+            <td><input type="text" name="date[]" value="01 DEC" required></td>
+            <td><input type="text" name="time[]" value="1100-1400" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2117" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+
+           <tr class="subject-row">
+            <td><input type="text" name="date[]" value="04 DEC" required></td>
+            <td><input type="text" name="time[]" value="0900-1100" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2119" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+
+           <tr class="subject-row">
+            <td><input type="text" name="date[]" value="07 DEC" required></td>
+            <td><input type="text" name="time[]" value="0900-1100" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2111" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+          <tr class="subject-row">
+            <td><input type="text" name="date[]" value="09 DEC" required></td>
+            <td><input type="text" name="time[]" value="0900-1200" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2120" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+          <tr class="subject-row">
+            <td><input type="text" name="date[]" value="12 DEC" required></td>
+            <td><input type="text" name="time[]" value="0900-1200" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2110" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+          <tr class="subject-row">
+            <td><input type="text" name="date[]" value="14 DEC" required></td>
+            <td><input type="text" name="time[]" value="0900-1100" required></td>
+            <td><input type="text" name="venue[]" value="FOC" required></td>
+            <td><input type="text" name="subject-name[]" value="IT2115" required></td>
+            <td><input type="text" name="student-signature[]" required></td>
+            <td><input type="text" name="invigilator-signature[]" required></td>
+          </tr>
+        <!-- Repeat ends here -->
+      </tbody>
+    </table>
+
+    <div id="signatures">
+      <div class="signature-block">
+        <label for="hod-signature">Head of the Department:</label>
+        <input type="text" id="hod-signature" name="hod-signature" required>
+      </div>
+
+      <div class="signature-block">
+        <label for="student-signature">Student Signature:</label>
+        <input type="text" id="student-signature" name="student-signature" required>
+      </div>
+
+      <div class="signature-block">
+        <label for="ma-signature">Management Assistant:</label>
+        <input type="text" id="ma-signature" name="ma-signature" required>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 KDU FOC . All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
